@@ -16,6 +16,6 @@ export async function GET(req){
   try{const u=await fetch("https://www.googleapis.com/oauth2/v2/userinfo",{headers:{Authorization:`Bearer ${tok.access_token}`},cache:"no-store"});if(u.ok)email=(await u.json()).email||""}catch{}
   const old=await getGoogleConnection(payload.profileId);
   await saveGoogleConnection({profile_id:payload.profileId,google_email:email,refresh_token:tok.refresh_token||old?.refresh_token||"",access_token:tok.access_token,expires_at:new Date(Date.now()+Number(tok.expires_in||3600)*1000).toISOString(),scope:tok.scope||""});
-  return NextResponse.redirect(new URL("/?google=connected",origin));
+  return NextResponse.redirect(new URL("/?google=connected&page=calendar",origin));
  }catch(e){return NextResponse.redirect(new URL(`/?google_error=${encodeURIComponent(e.message||"oauth")}`,origin))}
 }
