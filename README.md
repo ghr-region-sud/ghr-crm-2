@@ -1,4 +1,4 @@
-# GHR CRM V8.5 — dépôt propre
+# GHR CRM V8.6 — correctif accès délégués
 
 Cette archive doit être utilisée dans un **nouveau dépôt GitHub vide**.
 Ne pas la superposer à l'ancien dépôt `crm-app`, qui contient des fichiers PRESTY hérités (PrestyApp, instituts, handlers legacy, etc.).
@@ -22,3 +22,11 @@ Ne pas la superposer à l'ancien dépôt `crm-app`, qui contient des fichiers PR
 2. Importer uniquement le contenu de cette archive.
 3. Importer ce dépôt dans Vercel comme nouveau projet, ou reconnecter le projet Vercel GHR à ce nouveau dépôt.
 4. Réattribuer ensuite le domaine habituel au nouveau projet si nécessaire.
+
+
+## Correctif V8.6
+
+- Le bouton **Activer l’accès** rattache automatiquement un ancien délégué à un utilisateur Supabase Auth qui existe déjà avec le même email.
+- Si aucun utilisateur Auth n’existe, il est créé normalement.
+- L’identifiant métier historique du délégué est conservé afin de garder ses entreprises, adhésions, paiements et reporting.
+- L’erreur brute `email_exists` n’est plus bloquante.
