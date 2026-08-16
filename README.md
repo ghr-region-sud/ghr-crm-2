@@ -38,3 +38,11 @@ Ne pas la superposer à l'ancien dépôt `crm-app`, qui contient des fichiers PR
 - Protection stricte : un compte administrateur ne peut jamais être réaffecté à un délégué.
 - Réparation automatique du cas historique où le profil admin avait été déplacé sur l’ID d’un délégué.
 - Conservation du parcours « Mot de passe oublié » de la V8.7.
+
+
+## V8.9 — Sélecteur de contexte administrateur
+- Le profil en haut à droite est cliquable pour les administrateurs.
+- Recherche et accès direct aux espaces des délégués actifs sans déconnexion.
+- La session Supabase reste celle de l’administrateur : seul le contexte d’affichage change.
+- Retour à l’administration depuis le même menu ou le bandeau Mode administrateur.
+- Le sélecteur est inaccessible aux délégués.
