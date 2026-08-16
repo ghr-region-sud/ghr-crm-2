@@ -1,4 +1,4 @@
-# GHR CRM V8.8 — correctif accès délégués
+# GHR CRM V9.0 — correctif accès délégués
 
 Cette archive doit être utilisée dans un **nouveau dépôt GitHub vide**.
 Ne pas la superposer à l'ancien dépôt `crm-app`, qui contient des fichiers PRESTY hérités (PrestyApp, instituts, handlers legacy, etc.).
@@ -24,7 +24,7 @@ Ne pas la superposer à l'ancien dépôt `crm-app`, qui contient des fichiers PR
 4. Réattribuer ensuite le domaine habituel au nouveau projet si nécessaire.
 
 
-## Correctif V8.8
+## Correctif V9.0
 
 - Le bouton **Activer l’accès** rattache automatiquement un ancien délégué à un utilisateur Supabase Auth qui existe déjà avec le même email.
 - Si aucun utilisateur Auth n’existe, il est créé normalement.
@@ -32,7 +32,7 @@ Ne pas la superposer à l'ancien dépôt `crm-app`, qui contient des fichiers PR
 - L’erreur brute `email_exists` n’est plus bloquante.
 
 
-## Correctif V8.8
+## Correctif V9.0
 - Rattachement automatique des anciens délégués à une identité Supabase Auth existante.
 - Mise à jour du profil `app_users` par ID métier au lieu de tenter un doublon.
 - Protection stricte : un compte administrateur ne peut jamais être réaffecté à un délégué.
@@ -40,7 +40,7 @@ Ne pas la superposer à l'ancien dépôt `crm-app`, qui contient des fichiers PR
 - Conservation du parcours « Mot de passe oublié » de la V8.7.
 
 
-## V8.9 — Sélecteur de contexte administrateur
+## V9.0 — Sélecteur de contexte administrateur
 - Le profil en haut à droite est cliquable pour les administrateurs.
 - Recherche et accès direct aux espaces des délégués actifs sans déconnexion.
 - La session Supabase reste celle de l’administrateur : seul le contexte d’affichage change.
