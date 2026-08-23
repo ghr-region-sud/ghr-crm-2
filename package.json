@@ -1,6 +1,6 @@
 {
-  "name": "ghr-crm-v12-2",
-  "version": "12.2.0",
+  "name": "ghr-crm-v13-simplifie",
+  "version": "13.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
