@@ -268,3 +268,64 @@ html,body{height:100%;overflow:hidden}.shell{height:100vh;min-height:0;display:f
 /* Responsive */
 @media(max-width:1180px){.admin-layout .grid.kpis{grid-template-columns:repeat(2,1fr)!important}.admin-layout .dashboardcharts{grid-template-columns:1fr!important}.v152-stat-grid{grid-template-columns:repeat(3,1fr)!important}}
 @media(max-width:760px){.admin-layout .main,.member-layout.v152-layout .main{padding:18px 12px 40px!important}.app-pagehead,.pagehead{align-items:flex-start!important}.app-pagehead h1,.pagehead h1{font-size:25px!important}.toolbar{flex-wrap:wrap!important}.task-hero{grid-template-columns:1fr}.admin-layout .grid.kpis,.v152-stat-grid{grid-template-columns:1fr 1fr!important}.modal{width:96vw!important;max-height:92vh!important;padding:16px!important}.app-drawer{width:100vw!important}.membership-overlay-panel{width:100vw!important;padding:14px 12px 60px!important}}
+
+/* =========================================================
+   V15.4 — Product coherence pass
+   Dense navigation, dashboards, horizontal pipeline, mobile
+   ========================================================= */
+
+/* Sidebar: modules stay compact instead of stretching vertically */
+.sidebar-nav.delegate-module-nav{display:grid!important;grid-auto-rows:max-content!important;align-content:start!important;gap:3px!important;overflow-y:auto!important}
+.admin-layout .sidebar-nav.delegate-module-nav,.delegate-sidebar-v152 .sidebar-nav.delegate-module-nav{padding:0 10px 10px!important}
+.admin-layout .sidebar-profile,.delegate-sidebar-v152 .sidebar-profile{padding:16px 12px!important;margin:0 0 8px!important}
+.admin-layout .sidebar-title,.delegate-sidebar-v152 .sidebar-title{margin:10px 8px 5px!important}
+.admin-layout .navbtn,.admin-layout .navgroup-head,.delegate-sidebar-v152 .navbtn,.delegate-sidebar-v152 .navgroup-head{min-height:40px!important;padding:9px 10px!important}
+.admin-layout .navbtn.active,.delegate-sidebar-v152 .navbtn.active{background:rgba(255,255,255,.16)!important;color:#fff!important;box-shadow:none!important;border:1px solid rgba(255,255,255,.15)!important}
+.admin-layout .module-home.active,.delegate-sidebar-v152 .module-home.active{background:rgba(255,255,255,.16)!important;color:#fff!important}
+.admin-layout .navgroup,.delegate-sidebar-v152 .navgroup{margin:0!important;overflow:visible!important}
+.admin-layout .navgroup-children,.delegate-sidebar-v152 .navgroup-children{padding:1px 0 4px 26px!important}
+.admin-layout .navchild,.delegate-sidebar-v152 .navchild{min-height:34px!important;padding:7px 9px!important}
+.admin-layout .navchild.active,.delegate-sidebar-v152 .navchild.active{background:rgba(255,255,255,.14)!important}
+
+/* Unified page rhythm */
+.main{background:#f5f7fb!important}
+.pagehead,.app-pagehead{margin-bottom:14px!important}
+.pagehead h1,.app-pagehead h1{letter-spacing:-.04em!important}
+.pagehead p,.app-pagehead p{font-size:13px!important}
+.card{box-shadow:none!important}
+.filters{align-items:center!important}
+
+/* V15.4 delegate dashboard */
+.v154-home{max-width:1460px;margin:0 auto}.v154-home-head{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;margin-bottom:18px}.v154-home-head h1{font-size:34px;letter-spacing:-.045em;margin:3px 0 4px}.v154-home-head p{margin:0;color:#7d8797}.v154-home-filters{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.v154-kpis{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin-bottom:14px}.v154-kpis .kpi{background:#fff;border:1px solid var(--app-line);border-radius:14px;padding:14px;min-height:98px}.v154-dashboard-main{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(320px,.65fr);gap:12px;margin-bottom:12px}.v154-chart-card,.v154-actions-card{padding:18px!important}.v154-chart-card .chartbox{height:300px!important}.v154-action-stats{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px}.v154-action-stats>div{background:#f7f9fc;border:1px solid #eceff4;border-radius:12px;padding:12px}.v154-action-stats strong{display:block;font-size:22px}.v154-action-stats span{font-size:11px;color:#7e8795}.v154-home .reportsummary{margin-top:12px}
+
+/* Admin dashboard no operational noise; reporting is the bottom block */
+.admin-layout .dashboardcharts{margin-bottom:12px!important}.admin-layout .reportsummary{margin-top:0!important}
+
+/* Pipeline always one horizontal row */
+.pipeline-scroll{overflow-x:auto!important;overflow-y:hidden!important;scrollbar-gutter:stable;padding-bottom:10px!important}.sales-pipeline,.v152-pipeline{display:grid!important;grid-template-columns:repeat(8,260px)!important;grid-template-rows:1fr!important;grid-auto-flow:column!important;gap:10px!important;min-width:max-content!important;height:100%!important;align-items:stretch!important}.sales-stage,.v152-pipeline .sales-stage{width:260px!important;min-width:260px!important;max-width:260px!important;min-height:360px!important}.sales-stage-list{overflow-y:auto!important;max-height:calc(100vh - 330px)!important}.v152-commercial{max-width:none!important}
+
+/* Task & payment drawers actually slide from the right */
+.app-drawer.task-drawer,.app-drawer.payment-drawer{position:fixed!important;right:0!important;top:0!important;bottom:0!important;z-index:151!important;height:100vh!important;animation:v154drawer .18s ease-out}.drawerback{z-index:150!important}@keyframes v154drawer{from{transform:translateX(28px);opacity:.75}to{transform:none;opacity:1}}
+.payment-detail-card{margin:18px 0!important}
+
+/* Company follow-up is sectioned, not a 25-task long page */
+.company-followup-v154{display:grid;gap:12px}.company-followup-switch{width:max-content;max-width:100%;overflow:auto}.company-followup-switch b{margin-left:5px;background:#e9eef8;border-radius:999px;padding:2px 6px;font-size:10px}.v154-company-action-scroll{max-height:55vh;overflow:auto;padding-right:4px}
+
+/* Memberships & payments filters / responsive tables */
+.v154-membership-filters .searchbox{flex:1 1 320px}.v154-membership-filters select{flex:0 1 190px}.v154-payment-kpis{grid-template-columns:repeat(4,minmax(0,1fr))!important}.memberships-page-v154 .tablewrap,.payments-page-v154 .tablewrap{min-height:0}
+
+/* Statistics: one clear summary first, monthly detail collapsible */
+.reporting-page-v154{max-width:1460px;margin:0 auto}.v154-report-filters{background:#fff!important;border:1px solid var(--app-line)!important;border-radius:14px!important;padding:9px!important}.v154-report-kpis{grid-template-columns:repeat(5,minmax(0,1fr))!important}.v154-report-table{margin-bottom:12px}.v154-report-months details{padding:0!important;overflow:hidden}.v154-report-months summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:14px;padding:15px 17px;cursor:pointer}.v154-report-months summary::-webkit-details-marker{display:none}.v154-report-months summary span{font-size:12px;color:#7e8795}.v154-report-months details[open] summary{border-bottom:1px solid var(--app-line)}.v154-report-months .tablewrap{border:0!important;border-radius:0!important}
+
+/* Settings now uses contextual secondary navigation */
+.settings-layout-v154{display:grid;grid-template-columns:220px minmax(0,760px);gap:14px;align-items:start}.settings-subnav{background:#fff;border:1px solid var(--app-line);border-radius:14px;padding:7px;display:grid;gap:3px}.settings-subnav button{border:0;background:transparent;border-radius:9px;padding:10px 11px;text-align:left;color:#657084;font-weight:700}.settings-subnav button.active{background:#eef3ff;color:#1746bd}.settings-subnav button:disabled{opacity:.45}.settings-actions{display:flex;align-items:center;gap:10px}.settings-saved{font-size:12px;color:#21805c;font-weight:700}
+
+/* Membership editor drawer narrower and easier to scan */
+.membership-overlay-panel{width:min(920px,94vw)!important;padding:18px 20px 64px!important}.membership-overlay-panel .formgrid{gap:9px!important}.membership-overlay-panel .field{margin-bottom:9px!important}.membership-overlay-panel .card{padding:16px!important}.membership-overlay-panel .checkgrid{grid-template-columns:repeat(2,minmax(0,1fr))!important}.membership-overlay-panel .summarygrid{gap:10px!important}
+
+/* Mobile: app becomes stacked cards, no giant desktop tables */
+@media(max-width:1180px){.v154-kpis{grid-template-columns:repeat(3,1fr)}.v154-dashboard-main{grid-template-columns:1fr}.v154-report-kpis{grid-template-columns:repeat(3,1fr)!important}.settings-layout-v154{grid-template-columns:180px 1fr}}
+@media(max-width:760px){
+ .v154-home-head{align-items:flex-start;flex-direction:column}.v154-home-filters{width:100%}.v154-home-filters .periodfilters{width:100%}.v154-kpis{grid-template-columns:1fr 1fr}.v154-chart-card .chartbox{height:230px!important}.v154-report-kpis{grid-template-columns:1fr 1fr!important}.settings-layout-v154{grid-template-columns:1fr}.settings-subnav{display:flex;overflow:auto}.settings-subnav button{white-space:nowrap}
+ .v154-responsive-table{border:0!important;background:transparent!important;overflow:visible!important}.v154-responsive-table .table{min-width:0!important;display:block!important}.v154-responsive-table thead{display:none!important}.v154-responsive-table tbody{display:grid!important;gap:10px!important}.v154-responsive-table tr{display:grid!important;grid-template-columns:1fr 1fr!important;background:#fff!important;border:1px solid var(--app-line)!important;border-radius:14px!important;padding:12px!important}.v154-responsive-table td{display:block!important;border:0!important;padding:6px!important}.v154-responsive-table td:before{content:attr(data-label);display:block;font-size:9px;text-transform:uppercase;letter-spacing:.08em;color:#9199a7;font-weight:800;margin-bottom:3px}.v154-responsive-table td:first-child{grid-column:1/-1}.membership-overlay-panel{width:100vw!important;padding:12px 10px 58px!important}.membership-overlay-panel .checkgrid{grid-template-columns:1fr!important}.membership-overlay-panel .formgrid,.membership-overlay-panel .summarygrid{grid-template-columns:1fr!important}.sales-pipeline,.v152-pipeline{grid-template-columns:repeat(8,235px)!important}.sales-stage,.v152-pipeline .sales-stage{width:235px!important;min-width:235px!important;max-width:235px!important}
+}
