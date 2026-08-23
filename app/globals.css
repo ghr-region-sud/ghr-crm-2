@@ -559,3 +559,58 @@ html,body{height:100%;overflow:hidden}.shell{height:100vh;min-height:0;display:f
 .workspace-utility-v158{height:50px!important;padding:7px 22px 3px!important}
 .app-layout-v158 .fixed-page{height:calc(100vh - 50px)!important}
 .app-layout-v158 .main{padding-top:2px!important}
+
+/* =========================================================
+   V15.10 — stabilisation navigation + modales harmonisées
+   ========================================================= */
+/* La fiche entreprise doit rester robuste même avec d'anciennes données. */
+.company-detail-v14 .detail-back{margin-top:0!important;margin-bottom:8px!important}
+.company-detail-v14 .company-detail-fixed{padding-top:0!important}
+.company-detail-v14 .detailhead{padding-top:0!important}
+
+/* Modales : même langage visuel, sans micro-labels décoratifs. */
+.task-modal-v159,.contact-preview-modal-v159,.v158-opportunity{
+  border:1px solid #e6eaf1!important;
+  box-shadow:0 30px 90px rgba(15,28,62,.22)!important;
+}
+.task-modal-head-v159{padding:26px 28px 18px!important;border-bottom:1px solid #edf0f5!important}
+.task-modal-head-v159 h2{font-size:25px!important;line-height:1.15!important;letter-spacing:-.025em!important;margin:0 0 6px!important;color:#17223d!important}
+.task-modal-head-v159 p{font-size:13px!important;color:#7d8797!important;margin:0!important}
+.task-overview-v159{padding:18px 28px!important;gap:12px!important}
+.task-info-v159,.task-contact-v159{border-radius:16px!important;background:#f8f9fc!important;border:1px solid #e7ebf1!important}
+.task-info-v159>div,.task-contact-v159>div{min-width:0}
+.task-info-v159 strong,.task-contact-v159 strong{font-size:13px!important;text-transform:none!important;letter-spacing:0!important;color:#27334a!important}
+.task-info-v159 span,.task-contact-v159 span{font-size:12px!important;color:#6f7a8d!important;font-weight:500!important}
+.task-modal-footer-v159{padding:4px 28px 24px!important;gap:12px!important}
+.task-modal-footer-v159>div{gap:8px!important}
+.task-delete-v159{font-size:12px!important}
+
+.contact-preview-modal-v159{padding:28px!important}
+.contact-preview-heading-v159{padding-right:52px!important;gap:15px!important}
+.contact-preview-heading-v159 h2{font-size:26px!important;letter-spacing:-.025em!important;margin:0 0 5px!important;color:#17223d!important}
+.contact-preview-heading-v159 p{font-size:13px!important;color:#7d8797!important}
+.contact-preview-actions-v159{margin-top:20px!important}
+.contact-company-preview-v159{margin-top:12px!important;padding:15px 16px!important}
+.contact-company-preview-v159>div>span{display:none!important}
+.contact-company-preview-v159 strong{font-size:15px!important;color:#17223d!important}
+.contact-company-preview-v159 small{font-size:11px!important;line-height:1.45!important}
+.contact-preview-modal-v159 .modal-footer{border-top:0!important;padding:14px 0 0!important}
+
+/* Opportunité : fiche compacte, hiérarchie homogène. */
+.v158-opportunity .opportunity-modal-head h2{font-size:25px!important}
+.opportunity-title-contact{font-weight:500!important;color:#7d8797!important;font-size:.72em!important}
+.opportunity-inline-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:10px!important}
+.opportunity-inline-grid>div,.next-action-box-v158{background:#f8f9fc!important;border:1px solid #e7ebf1!important;border-radius:13px!important;padding:12px!important}
+.opportunity-inline-grid span,.next-action-box-v158>span,.opportunity-contact-head span{font-size:10px!important;text-transform:uppercase!important;letter-spacing:.08em!important;color:#8a94a5!important;font-weight:800!important}
+.opportunity-inline-grid strong,.next-action-box-v158 strong{font-size:13px!important;color:#202c43!important}
+.opportunity-footer{padding-top:14px!important}
+
+/* Entreprises : ligne entière réellement interactive. */
+.v15-list-row{position:relative;z-index:0}
+.v15-list-row:focus-visible{outline:2px solid #2c61dc;outline-offset:-2px}
+
+@media(max-width:760px){
+  .task-modal-head-v159,.task-overview-v159{padding-left:18px!important;padding-right:18px!important}
+  .task-modal-footer-v159{padding-left:18px!important;padding-right:18px!important}
+  .opportunity-inline-grid{grid-template-columns:1fr!important}
+}
