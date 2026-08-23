@@ -640,3 +640,12 @@ html,body{height:100%;overflow:hidden}.shell{height:100vh;min-height:0;display:f
   .membership-editor-actions-v160{width:100%;display:grid;grid-template-columns:1fr;gap:8px}
   .membership-editor-actions-v160 .btn{width:100%;justify-content:center}
 }
+
+/* V15.14 — création de tâche directement dans l'aperçu opportunité (pas de modal imbriquée) */
+.opportunity-task-compose-v161{display:grid;gap:10px;padding:14px;border:1px solid #e2e7ef;border-radius:14px;background:#f8fafc}
+.opportunity-task-compose-row-v161{display:grid;grid-template-columns:180px minmax(0,1fr);gap:10px}
+.opportunity-task-compose-row-v161.compact{grid-template-columns:1fr 1fr 1.35fr}
+.opportunity-task-compose-bottom-v161{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:center}
+.opportunity-task-compose-v161 .input{min-height:42px}
+.opportunity-task-compose-v161 .btn{white-space:nowrap;min-height:42px}
+@media(max-width:700px){.opportunity-task-compose-row-v161,.opportunity-task-compose-row-v161.compact,.opportunity-task-compose-bottom-v161{grid-template-columns:1fr}.opportunity-task-compose-v161 .btn{width:100%}}
