@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Bulletin d'adhésion GHR Région Sud</title>
+  <link rel="stylesheet" href="bulletin-template.css">
+</head>
+<body>
+<main class="bulletin" id="bulletin-ghr">
+  <header class="header">
+    <img class="logo" src="logo-ghr-region-sud.png" alt="GHR Région Sud">
+    <div class="title">
+      <h1>BULLETIN<br>D’ADHÉSION</h1>
+      <div class="gold-line"></div>
+      <h2>ANNÉE <span data-field="membership.year">2026</span></h2>
+      <div class="membership-choice">
+        <label><span class="box" data-check="membership.isNew"></span> NOUVELLE ADHÉSION</label>
+        <label><span class="box" data-check="membership.isRenewal"></span> RENOUVELLEMENT</label>
+      </div>
+    </div>
+    <aside class="network">
+      <div class="network-icon">●●●</div>
+      <strong>Un réseau qui vous<br>accompagne au quotidien</strong>
+      <p>Conseil, défense, tarifs négociés, formations, assurances, avantages exclusifs… Le GHR est à vos côtés pour vous informer, vous conseiller et faire entendre votre voix.</p>
+    </aside>
+  </header>
+
+  <div class="columns">
+    <div class="left">
+      <section class="section">
+        <h3><span class="ico">▦</span> ÉTABLISSEMENT</h3>
+        <div class="field full"><b>Nom de l’établissement</b><span data-field="company.name"></span></div>
+        <div class="field full"><b>Raison sociale / Société <small>(si différente de l’établissement)</small></b><span data-field="company.legalName"></span></div>
+        <div class="field full"><b>Adresse</b><span data-field="company.address"></span></div>
+        <div class="row">
+          <div class="field"><b>Code postal</b><span data-field="company.postalCode"></span></div>
+          <div class="field"><b>Ville</b><span data-field="company.city"></span></div>
+        </div>
+        <div class="row">
+          <div class="field"><b>Téléphone</b><span data-field="company.phone"></span></div>
+          <div class="field"><b>E-mail</b><span data-field="company.email"></span></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h3><span class="ico">●</span> CONTACT RÉFÉRENT</h3>
+        <div class="row">
+          <div class="field"><b>Nom</b><span data-field="contact.lastName"></span></div>
+          <div class="field"><b>Prénom</b><span data-field="contact.firstName"></span></div>
+        </div>
+        <div class="field full"><b>Fonction</b><span data-field="contact.role"></span></div>
+        <div class="row">
+          <div class="field"><b>Téléphone</b><span data-field="contact.phone"></span></div>
+          <div class="field"><b>E-mail</b><span data-field="contact.email"></span></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h3><span class="ico">▣</span> ACTIVITÉ</h3>
+        <p class="hint">Type(s) d’activité <small>(cochez votre ou vos activités principales)</small></p>
+        <div class="checks activity">
+          <label><span class="box" data-check="activity.hotel"></span>Hôtel</label>
+          <label><span class="box" data-check="activity.hotel2"></span>Hôtel 2★</label>
+          <label><span class="box" data-check="activity.hotel3"></span>Hôtel 3★</label>
+          <label><span class="box" data-check="activity.hotel4"></span>Hôtel 4★</label>
+          <label><span class="box" data-check="activity.hotel5"></span>Hôtel 5★</label>
+          <label><span class="box" data-check="activity.luxuryHotel"></span>Hôtel de luxe</label>
+          <label><span class="box" data-check="activity.restaurant"></span>Restaurant / Brasserie</label>
+          <label><span class="box" data-check="activity.cafeBar"></span>Café / Bar</label>
+          <label><span class="box" data-check="activity.nightclub"></span>Discothèque</label>
+          <label><span class="box" data-check="activity.ambianceBar"></span>Bar à ambiance</label>
+          <label><span class="box" data-check="activity.caterer"></span>Traiteur</label>
+          <label><span class="box" data-check="activity.fastFood"></span>Restauration rapide</label>
+        </div>
+        <div class="field full"><b>Autre</b><span data-field="company.otherActivity"></span></div>
+        <div class="row">
+          <div class="field"><b>Nombre de salariés</b><span data-field="company.employees"></span></div>
+          <div class="field"><b>Nombre de chambres</b><span data-field="company.rooms"></span></div>
+        </div>
+        <div class="field full"><b>Classement</b><span data-field="company.classification"></span></div>
+        <div class="field full"><b>Type de licence</b><span data-field="company.licenseType"></span></div>
+        <div class="row">
+          <div class="field"><b>Numéro de SIRET</b><span data-field="company.siret"></span></div>
+          <div class="field"><b>Code NAF</b><span data-field="company.naf"></span></div>
+        </div>
+        <div class="field full"><b>Statut juridique de l’exploitant</b><span data-field="company.legalStatus"></span></div>
+      </section>
+
+      <section class="section">
+        <h3><span class="ico">◉</span> ADHÉSION & COTISATION</h3>
+        <div class="field full"><b>Montant de votre cotisation <span data-field="membership.year">2026</span> <small>(voir grille tarifaire)</small></b><span><i data-field="membership.amount"></i> €</span></div>
+        <div class="field full"><b>Type d’adhésion</b><span data-field="membership.type"></span></div>
+        <div class="field full"><b>Année d’adhésion</b><span data-field="membership.year"></span></div>
+      </section>
+
+      <section class="section">
+        <h3><span class="ico">✓</span> OPTIONS & AUTORISATIONS <small>(cochez vos choix)</small></h3>
+        <div class="option"><span>Je souhaite recevoir la newsletter</span><label><span class="box" data-check="options.newsletterYes"></span>Oui</label><label><span class="box" data-check="options.newsletterNo"></span>Non</label></div>
+        <div class="option"><span>Je souhaite recevoir des informations sur GHR-Assurances</span><label><span class="box" data-check="options.insuranceYes"></span>Oui</label><label><span class="box" data-check="options.insuranceNo"></span>Non</label></div>
+        <div class="option"><span>Je souhaite bénéficier de la protection juridique (en option) à 72 €</span><label><span class="box" data-check="options.legalProtectionYes"></span>Oui</label><label><span class="box" data-check="options.legalProtectionNo"></span>Non</label></div>
+        <div class="option"><span>J’autorise le GHR Région Sud à faire état de mon adhésion lors de toute communication utile</span><label><span class="box" data-check="options.communicationYes"></span>Oui</label><label><span class="box" data-check="options.communicationNo"></span>Non</label></div>
+      </section>
+    </div>
+
+    <div class="right">
+      <section class="section tinted">
+        <h3><span class="ico">▰</span> MODE DE RÈGLEMENT</h3>
+        <p class="hint">Mode de règlement choisi :</p>
+        <div class="payment-checks">
+          <label><span class="box" data-check="payment.cheque"></span>Chèque (à l’ordre de « GHR Région Sud »)</label>
+          <label><span class="box" data-check="payment.sepa"></span>Prélèvement SEPA</label>
+          <label><span class="box" data-check="payment.transfer"></span>Virement</label>
+        </div>
+        <div class="bank-box">
+          <strong>Coordonnées bancaires du GHR Région Sud</strong>
+          <p>IBAN : <span data-config="ghr.iban">À renseigner dans la configuration CRM</span></p>
+          <p>BIC : <span data-config="ghr.bic">À renseigner dans la configuration CRM</span></p>
+        </div>
+      </section>
+
+      <section class="section tinted" data-section="sepa">
+        <h3><span class="ico">✎</span> MANDAT DE PRÉLÈVEMENT SEPA</h3>
+        <p class="hint italic">À compléter uniquement en cas de prélèvement SEPA</p>
+        <div class="field full"><b>Titulaire du compte</b><span data-field="sepa.accountHolder"></span></div>
+        <div class="field full"><b>Adresse</b><span data-field="sepa.address"></span></div>
+        <div class="field full"><b>Code postal</b><span data-field="sepa.postalCode"></span></div>
+        <div class="field full"><b>Ville</b><span data-field="sepa.city"></span></div>
+        <div class="field full"><b>Pays</b><span data-field="sepa.country"></span></div>
+        <div class="field full"><b>IBAN</b><span data-field="sepa.iban"></span></div>
+        <div class="field full"><b>BIC</b><span data-field="sepa.bic"></span></div>
+        <div class="creditor">
+          <p><b>Créancier :</b> GHR Région Sud</p>
+          <p data-config="ghr.address">830 Boulevard de Léry - 83140 Six Fours Les Plages</p>
+          <p><b>Type de paiement :</b> Paiement récurrent / Reconductible</p>
+          <p><b>Montant de la cotisation annuelle :</b> <span data-field="membership.amount"></span> €</p>
+        </div>
+        <div class="rib">📎 Joindre obligatoirement un RIB</div>
+      </section>
+
+      <section class="section tinted validation">
+        <h3><span class="ico">✎</span> VALIDATION</h3>
+        <div class="field full"><b>Fait à</b><span data-field="signature.place"></span></div>
+        <div class="field full"><b>Le</b><span data-field="signature.date"></span></div>
+        <div class="signature">Signature et cachet de l’adhérent</div>
+      </section>
+    </div>
+  </div>
+
+  <footer>
+    <div class="tax">
+      <div class="shield">◇</div>
+      <div><strong>Déductibilité fiscale</strong><p>Conformément aux dispositions du 1° du 1 de l’article 39 du Code général des impôts, vos cotisations d’adhésion peuvent être déduites de votre bénéfice net, en tant que « frais généraux ».</p></div>
+    </div>
+    <div class="contact-footer">
+      <div class="footer-address-row">
+        <span class="footer-pin" aria-hidden="true"></span>
+        <div class="footer-address-text">
+          <strong>GHR Région Sud</strong>
+          <span data-config="ghr.address">830 Boulevard de Léry - 83140 Six Fours Les Plages</span>
+        </div>
+      </div>
+      <div class="footer-digital-row">
+        <div class="footer-digital-item">
+          <span class="footer-globe" aria-hidden="true"></span>
+          <span data-config="ghr.websiteLabel">www.ghr-regionsud.fr</span>
+        </div>
+        <div class="footer-digital-item">
+          <span class="footer-mail" aria-hidden="true"></span>
+          <span data-config="ghr.email">contact@ghr-region-sud.fr</span>
+        </div>
+      </div>
+    </div>
+    <div class="legal">Les informations recueillies sont nécessaires à la gestion de votre adhésion et à la relation avec votre organisation professionnelle. Vos données sont traitées conformément au RGPD.</div>
+  </footer>
+</main>
+
+<script>
+/*
+  Exemple minimal d'hydratation.
+  En production, injecter les données côté serveur avant génération PDF.
+*/
+window.renderBulletin = function(data) {
+  document.querySelectorAll('[data-field]').forEach(el => {
+    const value = el.dataset.field.split('.').reduce((o,k)=>o?.[k], data);
+    if (value !== undefined && value !== null) el.textContent = value;
+  });
+  document.querySelectorAll('[data-check]').forEach(el => {
+    const value = el.dataset.check.split('.').reduce((o,k)=>o?.[k], data);
+    el.classList.toggle('checked', value === true);
+  });
+  const sepa = document.querySelector('[data-section="sepa"]');
+  if (sepa) sepa.hidden = data?.payment?.sepa !== true;
+};
+</script>
+</body>
+</html>
