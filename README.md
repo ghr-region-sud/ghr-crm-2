@@ -69,3 +69,6 @@ Cette version reprend la V15.3 et corrige les incohérences signalées sur l'esp
 - parsing JSX/TypeScript : 0 erreur de syntaxe ;
 - contrôle statique des composants JSX effectué ;
 - `npm install` n'a pas terminé dans l'environnement d'exécution (timeout réseau), donc le build Next/Vercel reste la validation de déploiement.
+
+## V15.5
+Voir `README-V15.5.md`.
