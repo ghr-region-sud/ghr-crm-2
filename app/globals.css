@@ -618,3 +618,6 @@ html,body{height:100%;overflow:hidden}.shell{height:100vh;min-height:0;display:f
 /* V15.11 — stabilisation ouverture fiche depuis Communauté > Entreprises */
 .v1511-company-row{cursor:pointer;appearance:none;text-align:inherit;width:100%;}
 .v1511-company-row:focus-visible{outline:2px solid #2d5bdb;outline-offset:-2px;}
+
+/* V15.12 — menu Ajouter fiche entreprise */
+.quick-add-menu{position:relative;display:inline-flex}.quick-add-popover{position:absolute;right:0;top:calc(100% + 8px);z-index:80;min-width:220px;padding:8px;background:#fff;border:1px solid #e3e8f2;border-radius:14px;box-shadow:0 18px 50px rgba(15,31,70,.16)}.quick-add-popover button{width:100%;display:flex;align-items:center;gap:10px;padding:10px 12px;border:0;background:transparent;border-radius:9px;text-align:left;font:inherit;color:#17223b;cursor:pointer}.quick-add-popover button:hover{background:#f2f6ff}.quick-add-popover button:disabled{opacity:.42;cursor:not-allowed}
