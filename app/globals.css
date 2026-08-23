@@ -138,3 +138,133 @@ html,body{height:100%;overflow:hidden}.shell{height:100vh;min-height:0;display:f
 .company-detail-v14 .company-detail-fixed{background:rgba(247,248,251,.96)!important;backdrop-filter:blur(14px);border-bottom:1px solid var(--v152-line)!important}.company-detail-v14 .app-tabs{background:#fff!important;border:1px solid var(--v152-line)!important;border-radius:12px!important;padding:4px!important;width:max-content;max-width:100%;overflow:auto}.company-detail-v14 .app-tabs button{border-radius:9px!important}.company-detail-v14 .app-card{box-shadow:none!important;border:1px solid var(--v152-line)!important;border-radius:16px!important}.company-detail-v14 .summaryline{padding:11px 0!important}
 @media(max-width:1180px){.v152-stat-grid{grid-template-columns:repeat(3,1fr)}.v152-dashboard-grid{grid-template-columns:1fr}.v152-quick-grid{grid-template-columns:repeat(4,1fr)}}
 @media(max-width:760px){.member-layout.v152-layout .main{padding:20px 14px 44px!important}.v152-page-header{align-items:flex-start}.v152-date{display:none}.v152-stat-grid{grid-template-columns:1fr 1fr}.v152-dashboard-grid{grid-template-columns:1fr}.v152-task-summary{grid-template-columns:1fr 1fr}.v152-task-summary button:nth-child(2){border-right:0}.v152-task-summary button:nth-child(-n+2){border-bottom:1px solid var(--v152-line)}.v152-quick-grid{grid-template-columns:1fr 1fr}.membership-overlay-panel{width:100vw;padding:16px 14px 70px}.membership-overlay-panel .tabs{top:100px}}
+
+/* =========================================================
+   V15.3 — refonte UX complète, cohérence Admin + Délégué
+   ========================================================= */
+:root{
+  --app-bg:#f4f6fa;--app-panel:#ffffff;--app-panel-soft:#f8f9fc;--app-ink:#14213d;
+  --app-muted:#7a8496;--app-line:#e6eaf0;--app-blue:#2055d6;--app-blue-dark:#143caa;
+  --app-blue-950:#10275f;--app-green:#21875f;--app-red:#d95c4b;--app-amber:#b87518;
+  --app-r:16px;--app-r-lg:22px;--app-shadow:0 8px 28px rgba(15,39,82,.055);
+}
+
+/* Same application frame for admin and delegate */
+.admin-layout,.member-layout.v152-layout{background:var(--app-bg)}
+.admin-layout .workspace-column,.member-layout.v152-layout .workspace-column{background:var(--app-bg)}
+.admin-layout .main,.member-layout.v152-layout .main{padding:28px 34px 48px!important;background:var(--app-bg)!important}
+.admin-layout .sidebar,.delegate-sidebar-v152{
+  background:linear-gradient(180deg,#173fae 0%,#245de0 58%,#2d6bea 100%)!important;
+  color:#fff!important;border-right:0!important;box-shadow:8px 0 30px rgba(14,36,94,.09)!important;
+  padding:0 12px 16px!important;
+}
+.admin-layout .sidebar-profile,.delegate-sidebar-v152 .sidebar-profile{padding:22px 12px 18px!important;margin:0 0 10px!important;border-bottom:1px solid rgba(255,255,255,.15)!important}
+.admin-layout .sidebar-profile .avatar,.delegate-sidebar-v152 .sidebar-profile .avatar{background:#fff!important;color:#1746bd!important;border-radius:13px!important}
+.admin-layout .sidebar-profile strong,.admin-layout .sidebar-profile small,.admin-layout .sidebar-title,
+.delegate-sidebar-v152 .sidebar-profile strong,.delegate-sidebar-v152 .sidebar-profile small,.delegate-sidebar-v152 .sidebar-title{color:#fff!important}
+.admin-layout .sidebar-title,.delegate-sidebar-v152 .sidebar-title{opacity:.58!important;font-size:9px!important;letter-spacing:.14em!important;margin:16px 10px 7px!important;padding:0!important}
+.admin-layout .delegate-module-nav,.delegate-sidebar-v152 .delegate-module-nav{display:grid;gap:4px}
+.admin-layout .navbtn,.admin-layout .navgroup-head,.admin-layout .navchild,
+.delegate-sidebar-v152 .navbtn,.delegate-sidebar-v152 .navgroup-head,.delegate-sidebar-v152 .navchild{color:rgba(255,255,255,.88)!important}
+.admin-layout .navbtn,.admin-layout .navgroup-head,.delegate-sidebar-v152 .navbtn,.delegate-sidebar-v152 .navgroup-head{border-radius:11px!important;padding:11px 12px!important;margin:0!important}
+.admin-layout .navbtn.active,.delegate-sidebar-v152 .navbtn.active{background:#fff!important;color:#1e50cd!important;box-shadow:0 8px 22px rgba(4,24,70,.12)!important}
+.admin-layout .navgroup-head,.delegate-sidebar-v152 .navgroup-head{width:100%;display:flex;gap:10px;align-items:center;border:0;background:transparent;font-size:14px;font-weight:700;cursor:pointer;text-align:left}
+.admin-layout .navgroup-head span,.delegate-sidebar-v152 .navgroup-head span{flex:1}
+.admin-layout .navgroup-head:hover,.admin-layout .navchild:hover,.delegate-sidebar-v152 .navgroup-head:hover,.delegate-sidebar-v152 .navchild:hover{background:rgba(255,255,255,.09)!important}
+.admin-layout .navgroup-children,.delegate-sidebar-v152 .navgroup-children{padding:2px 0 6px 27px!important;display:grid;gap:2px}
+.admin-layout .navchild,.delegate-sidebar-v152 .navchild{width:100%;border:0;background:transparent;padding:8px 10px;border-radius:9px;display:flex;align-items:center;gap:9px;font-size:12.5px;font-weight:650;cursor:pointer;text-align:left;color:rgba(255,255,255,.72)!important}
+.admin-layout .navchild.active,.delegate-sidebar-v152 .navchild.active{background:rgba(255,255,255,.16)!important;color:#fff!important}
+.admin-layout .logout,.delegate-sidebar-v152 .logout{margin-top:auto!important;border-top:1px solid rgba(255,255,255,.14)!important;border-radius:0!important;padding:17px 11px!important;color:rgba(255,255,255,.74)!important}
+
+/* Page chrome: title + controls only, no redundant hero block */
+.app-pagehead,.pagehead{margin:0 0 18px!important;padding:0!important;min-height:48px;align-items:center}
+.app-pagehead h1,.pagehead h1{font-size:28px!important;line-height:1.05!important;letter-spacing:-.045em!important;color:var(--app-ink)!important;margin:0!important}
+.app-pagehead p,.pagehead p{font-size:12px!important;color:var(--app-muted)!important;margin:5px 0 0!important;max-width:650px}
+.app-pagehead .toolbar,.pagehead .toolbar{gap:8px!important}
+.data-page,.app-page{max-width:1460px;margin:0 auto}
+
+/* Unified controls */
+.input,.select,.textarea{border:1px solid #dfe4ec!important;background:#fff!important;border-radius:11px!important;box-shadow:none!important;min-height:42px;color:#26334a}
+.input:focus,.textarea:focus,select.input:focus{border-color:#9bb4ef!important;box-shadow:0 0 0 3px rgba(32,85,214,.08)!important}
+.btn{border-radius:11px!important;min-height:40px;padding:0 14px!important;font-weight:720!important;box-shadow:none!important}
+.btn.primary{background:var(--app-blue)!important;color:#fff!important;border-color:var(--app-blue)!important}
+.btn.primary:hover{background:#194bc5!important}
+.btn.secondary{background:#fff!important;color:#24499f!important;border:1px solid #dce3ef!important}
+.btn.ghost{background:transparent!important;border-color:transparent!important}
+.filters,.app-filterbar,.v152-filterbar,.v15-filterbar{background:#fff!important;border:1px solid var(--app-line)!important;border-radius:14px!important;padding:9px!important;box-shadow:none!important;gap:8px!important;margin-bottom:12px!important}
+.searchbox{background:#f8f9fb;border:1px solid #edf0f4;border-radius:11px;padding:0 10px;min-height:42px}
+.searchbox .input{background:transparent!important;border:0!important;box-shadow:none!important}
+.viewtoggle,.app-segmented{background:#eef2f7!important;border-radius:11px!important;padding:3px!important;border:0!important}
+.viewtoggle button,.app-segmented button{border:0!important;border-radius:8px!important;background:transparent!important;color:#687385!important;min-height:34px}
+.viewtoggle button.active,.app-segmented button.active{background:#fff!important;color:#1746bd!important;box-shadow:0 1px 5px rgba(25,48,89,.08)!important}
+
+/* Tables behave like modern app lists */
+.tablewrap,.app-table-shell,.v152-table{background:#fff!important;border:1px solid var(--app-line)!important;border-radius:15px!important;box-shadow:none!important;overflow:auto!important}
+.table{border-collapse:separate!important;border-spacing:0!important}
+.table thead{position:sticky;top:0;z-index:3}
+.table thead th{background:#f8f9fb!important;color:#8a93a2!important;font-size:9px!important;letter-spacing:.08em!important;text-transform:uppercase!important;border-bottom:1px solid var(--app-line)!important;padding:12px 14px!important}
+.table tbody td{padding:13px 14px!important;border-bottom:1px solid #f0f2f5!important;color:#344054;font-size:12.5px!important}
+.table tbody tr:last-child td{border-bottom:0!important}
+.table tbody tr.clickrow{cursor:pointer;transition:background .14s ease}
+.table tbody tr.clickrow:hover{background:#f8fbff!important}
+.table td small{display:block;color:#8b94a4;font-size:10.5px;margin-top:2px}
+.table td strong{color:#1e293b}
+
+/* Cards / KPI: calmer, coherent across both spaces */
+.card,.app-card,.v152-panel,.v152-stat,.team-card{background:#fff!important;border:1px solid var(--app-line)!important;border-radius:var(--app-r)!important;box-shadow:none!important}
+.grid.kpis{gap:10px!important}
+.grid.kpis>*{min-height:100px!important;padding:16px!important}
+.kpi .value,.kpi strong{letter-spacing:-.035em}
+.chartbox{height:260px!important}
+.dashboardcharts{gap:12px!important}
+
+/* Commercial pipeline */
+.v152-commercial{max-width:1460px;margin:0 auto}.v152-commercial .pagehead{margin-bottom:14px!important}
+.pipeline-scroll{padding-bottom:8px}.v152-pipeline .sales-stage{background:#edf1f6!important;border-radius:13px!important;min-width:260px!important}
+.v152-pipeline .sales-stage-head{font-size:12px!important;color:#43506a!important}.v152-sales-card{background:#fff!important;border:1px solid #e2e7ef!important;border-radius:11px!important}
+.v152-sales-card:hover{transform:translateY(-1px);box-shadow:0 7px 20px rgba(23,48,99,.07)!important}
+.sales-stage-chip{border-radius:99px!important;background:#edf3ff!important;color:#204ebd!important;font-size:10px!important}
+
+/* Delegate company/contact list gets same shell as admin */
+.v15-page-title{margin-bottom:15px!important}.v15-page-title .v15-kicker,.v15-page-title>div>p:last-child{display:none!important}.v15-page-title h1{font-size:28px!important}
+.v15-list-shell,.v15-contact-grid{box-shadow:none!important}.v15-list-shell{border-radius:15px!important;border-color:var(--app-line)!important}
+.v15-list-head{background:#f8f9fb!important}.v15-list-row{padding:13px 16px!important}.v15-contact-card{border-radius:14px!important;box-shadow:none!important;border:1px solid var(--app-line)!important}
+
+/* Company 360: sticky identity / tabs and simpler interior */
+.company-detail-page{background:var(--app-bg)!important}.company-detail-v14 .company-detail-fixed{background:rgba(244,246,250,.96)!important;border-bottom:1px solid var(--app-line)!important;padding-bottom:10px!important}
+.company-detail-v14 .detailhead{padding:4px 0 10px!important}.company-detail-v14 .detailhead h1{font-size:30px!important;color:var(--app-ink)!important}.company-detail-v14 .detailmeta{gap:8px!important}
+.company-detail-v14 .app-tabs{background:#e9edf4!important;border:0!important;padding:4px!important;border-radius:11px!important}.company-detail-v14 .app-tabs button{background:transparent!important;border:0!important;color:#687385!important}.company-detail-v14 .app-tabs button.active{background:#fff!important;color:#1746bd!important;box-shadow:0 1px 5px rgba(20,42,85,.08)!important}
+.company-detail-scroll{padding-top:16px!important}.summarygrid.v14-info-grid{gap:12px!important}.company-detail-v14 .app-card{border-radius:14px!important}.company-simple-section.app-card{padding:18px!important}.company-action-item{background:#fff!important;border-radius:11px!important}
+
+/* Modals / drawers: all interactions feel like one product */
+.modalback{background:rgba(15,23,42,.42)!important;backdrop-filter:blur(4px)}
+.modal{border-radius:20px!important;border:1px solid rgba(255,255,255,.7)!important;box-shadow:0 30px 90px rgba(15,23,42,.24)!important;max-height:88vh!important;overflow:auto!important;background:#fff!important;padding:22px!important}
+.modal.wide{width:min(1040px,94vw)!important}.modal .pagehead{position:sticky;top:-22px;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);z-index:5;padding:17px 0 12px!important;margin-bottom:10px!important}
+.drawerback{background:rgba(15,23,42,.30)!important;backdrop-filter:blur(2px)!important}
+.app-drawer{width:min(470px,100vw)!important;background:#fff!important;border-left:1px solid var(--app-line)!important;box-shadow:-24px 0 70px rgba(15,23,42,.18)!important;padding:22px!important;overflow:auto!important}
+.drawer-header{display:flex;justify-content:space-between;align-items:flex-start;padding-bottom:16px;border-bottom:1px solid var(--app-line)}
+.drawer-header h2{font-size:24px;letter-spacing:-.035em;margin:3px 0;color:var(--app-ink)}
+.drawer-actions{display:flex;gap:8px;margin:16px 0}.drawer-actions .btn{flex:1}
+.drawer-link{width:100%;display:flex;align-items:center;gap:10px;border:1px solid var(--app-line);background:#f8faff;border-radius:12px;padding:13px;color:#24499f;font-weight:720;cursor:pointer;text-align:left}.drawer-link svg:last-child{margin-left:auto}
+.drawer-danger{width:100%;display:flex;align-items:center;gap:9px;border:0;background:transparent;color:#c3473a;padding:13px 2px;margin-top:8px;cursor:pointer;font-weight:650}
+.drawer-note{background:#f7f8fb;border:1px solid #eceff4;border-radius:13px;padding:14px;margin:14px 0}.drawer-note span{font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:#8d96a4;font-weight:800}.drawer-note p{margin:6px 0 0;color:#344054;line-height:1.5}
+.task-hero{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}.task-hero>div{background:#f8f9fb;border:1px solid #eceff4;border-radius:12px;padding:13px}.task-hero span{display:block;font-size:10px;color:#8d96a4;margin-bottom:5px}.task-hero strong{font-size:13px;color:#25324a}.drawer-form{display:grid;gap:12px;margin-top:17px}
+.task-row td:last-child{color:#9aa2af;text-align:right}.task-row:hover td:last-child{color:#2055d6}
+
+/* Membership drawer: polished, fixed action header and actual scroll */
+.membership-overlay-panel{width:min(1080px,94vw)!important;background:#f5f7fa!important;padding:20px 24px 72px!important}
+.membership-overlay-panel>.btn.ghost:first-child{display:none!important}
+.membership-overlay-panel .app-pagehead,.membership-overlay-panel .pagehead{top:0!important;background:rgba(245,247,250,.96)!important;padding:10px 0 14px!important;border-bottom:1px solid var(--app-line)!important}
+.membership-overlay-panel .tabs{top:72px!important;background:rgba(245,247,250,.96)!important;border-bottom:1px solid var(--app-line)!important;padding:8px 0!important}
+.membership-overlay-panel .tabcontent{padding-top:14px!important}.membership-overlay-panel .card{border-radius:14px!important}
+
+/* Dashboard Admin and delegate alignment */
+.admin-layout .grid.kpis{grid-template-columns:repeat(4,minmax(0,1fr))!important}.admin-layout .dashboardcharts{grid-template-columns:1.3fr .7fr!important}
+.v152-stat-grid{grid-template-columns:repeat(6,minmax(0,1fr))!important}.v152-stat{border-radius:14px!important;min-height:102px!important;padding:15px!important}.v152-panel{border-radius:15px!important;padding:18px!important}
+
+/* Reporting / team / notes / settings */
+.reportmonths{display:grid;gap:12px!important}.reportmonths>.card{padding:16px!important}.reportnote{background:#f8f9fb!important}.team-card{padding:18px!important}.team-stats{background:#f8f9fb!important;border-radius:12px!important;padding:12px!important}.settingscard{padding:18px!important}
+
+/* Responsive */
+@media(max-width:1180px){.admin-layout .grid.kpis{grid-template-columns:repeat(2,1fr)!important}.admin-layout .dashboardcharts{grid-template-columns:1fr!important}.v152-stat-grid{grid-template-columns:repeat(3,1fr)!important}}
+@media(max-width:760px){.admin-layout .main,.member-layout.v152-layout .main{padding:18px 12px 40px!important}.app-pagehead,.pagehead{align-items:flex-start!important}.app-pagehead h1,.pagehead h1{font-size:25px!important}.toolbar{flex-wrap:wrap!important}.task-hero{grid-template-columns:1fr}.admin-layout .grid.kpis,.v152-stat-grid{grid-template-columns:1fr 1fr!important}.modal{width:96vw!important;max-height:92vh!important;padding:16px!important}.app-drawer{width:100vw!important}.membership-overlay-panel{width:100vw!important;padding:14px 12px 60px!important}}
