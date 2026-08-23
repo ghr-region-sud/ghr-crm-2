@@ -673,3 +673,24 @@ html,body{height:100%;overflow:hidden}.shell{height:100vh;min-height:0;display:f
 .membership-validation-card{border-left:1px solid #e2e7ef}
 @media(max-width:900px){.task-day-group{grid-template-columns:1fr;gap:8px}.task-day-label{position:static;padding:8px 2px 0}.task-day-items{gap:8px}}
 @media(max-width:640px){.task-agenda-card.task-agenda-card-compact{grid-template-columns:72px minmax(0,1fr) 18px;padding:14px 13px}.task-time{padding-right:10px}.task-time strong{font-size:16px}.task-day-label strong{font-size:15px}}
+
+/* V15.17 — simplification adhésions vides + agenda tâches style Presty */
+.membership-sectionhead-v1517{margin-bottom:0}
+.membership-empty-simple{min-height:235px;border:0;background:transparent;font-size:16px;font-weight:800;color:#2a2e35}
+.actions-page-v157 .task-day-list{max-height:calc(100vh - 330px);overflow-y:auto;padding-right:8px;scrollbar-gutter:stable}
+.actions-page-v157 .task-day-list::-webkit-scrollbar{width:8px}
+.actions-page-v157 .task-day-list::-webkit-scrollbar-thumb{background:#d9dee8;border-radius:99px}
+.task-day-group{grid-template-columns:190px minmax(0,1fr);gap:24px}
+.task-day-label{padding:18px 0 0 2px;position:sticky;top:0;background:var(--bg,#f4f6fb);z-index:1}
+.task-day-label strong{font-size:17px;font-weight:850;letter-spacing:-.02em}
+.task-day-label span{font-size:12px;margin-top:5px;color:#8b93a3}
+.task-day-items{gap:12px}
+.task-agenda-card.task-agenda-card-compact{grid-template-columns:82px minmax(0,1fr) 24px;min-height:88px;padding:15px 18px;border-radius:16px;box-shadow:0 8px 24px rgba(28,47,92,.035)}
+.task-agenda-card-compact .task-time{border-right:0;padding-right:0;align-items:flex-start;padding-top:4px}
+.task-agenda-card-compact .task-time strong{font-size:17px}
+.task-agenda-card-compact .task-copy h3{font-size:15px;margin:2px 0 3px}
+.task-agenda-card-compact .task-copy p{font-size:13px;color:#697386}
+.task-agenda-card-compact .task-copy small{font-size:12px;color:#8a93a2;margin-top:4px}
+.membership-validation-card .membership-type-mini{align-self:flex-start;padding-top:4px}
+.membership-validation-card .membership-type-mini span{font-size:11px;text-transform:none;color:#8a93a2;font-weight:700}
+@media(max-width:900px){.actions-page-v157 .task-day-list{max-height:none;overflow:visible;padding-right:0}.task-day-label{position:static;background:transparent}.task-day-group{grid-template-columns:1fr;gap:8px}}
