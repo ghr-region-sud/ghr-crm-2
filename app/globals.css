@@ -621,3 +621,22 @@ html,body{height:100%;overflow:hidden}.shell{height:100vh;min-height:0;display:f
 
 /* V15.12 — menu Ajouter fiche entreprise */
 .quick-add-menu{position:relative;display:inline-flex}.quick-add-popover{position:absolute;right:0;top:calc(100% + 8px);z-index:80;min-width:220px;padding:8px;background:#fff;border:1px solid #e3e8f2;border-radius:14px;box-shadow:0 18px 50px rgba(15,31,70,.16)}.quick-add-popover button{width:100%;display:flex;align-items:center;gap:10px;padding:10px 12px;border:0;background:transparent;border-radius:9px;text-align:left;font:inherit;color:#17223b;cursor:pointer}.quick-add-popover button:hover{background:#f2f6ff}.quick-add-popover button:disabled{opacity:.42;cursor:not-allowed}
+
+/* V15.13 — polish des actions, modales et fiche adhésion */
+.quick-add-menu{position:relative!important;display:inline-flex!important;background:transparent!important;border:0!important;border-radius:0!important;padding:0!important;box-shadow:none!important;width:auto!important;overflow:visible!important}
+.quick-add-menu>.btn{margin:0!important;box-shadow:none!important}
+.quick-add-popover{right:0!important;top:calc(100% + 8px)!important}
+
+.task-form-clean-v160{padding:2px 2px 0}
+.task-form-clean-v160>.field,.task-form-clean-v160>.formgrid{margin-bottom:14px}
+.task-form-footer-v160,.task-edit-footer-v160{margin:18px 0 0!important;padding:0!important;display:flex!important;justify-content:flex-end!important}
+.task-edit-form-v159{padding:22px 28px 4px!important}
+.task-modal-v159>.modal-footer{padding:0 28px 26px!important;margin:18px 0 0!important}
+
+.membership-editor-actions-v160{display:flex;align-items:center;gap:10px;margin-left:auto}
+.membership-editor-top{align-items:center!important}
+
+@media(max-width:760px){
+  .membership-editor-actions-v160{width:100%;display:grid;grid-template-columns:1fr;gap:8px}
+  .membership-editor-actions-v160 .btn{width:100%;justify-content:center}
+}
