@@ -655,3 +655,21 @@ html,body{height:100%;overflow:hidden}.shell{height:100vh;min-height:0;display:f
 .contact-list-head-v161,.contact-list-row-v161{grid-template-columns:1.35fr 1.15fr 1.25fr 1fr 44px}.contact-list-row-v161{cursor:pointer}.contact-list-row-v161:hover{background:#f8faff}
 .opportunity-contact-tab-v161{padding:6px 0}.opportunity-contact-card-v161,.inline-contact-create-v161,.membership-contact-card-v161{border:1px solid var(--line);border-radius:18px;padding:22px;background:#fff}.opportunity-contact-card-v161 .contact-preview-details-v159{margin-top:18px}.inline-contact-create-v161>.btn{margin-top:18px}.membership-contact-tab-v161{padding:4px 0 28px}.membership-contact-card-v161{display:flex;align-items:center;justify-content:space-between;gap:24px}.membership-contact-card-v161>div:first-child{display:flex;align-items:center;gap:16px}.membership-contact-card-v161 h3{margin:0 0 4px}.membership-contact-card-v161 p,.membership-contact-card-v161 small{margin:0;color:var(--muted)}
 @media(max-width:900px){.contact-list-head-v161{display:none}.contact-list-row-v161{grid-template-columns:1fr 44px}.contact-list-row-v161>span:nth-child(2),.contact-list-row-v161>span:nth-child(3),.contact-list-row-v161>span:nth-child(4){grid-column:1}.membership-contact-card-v161{align-items:flex-start;flex-direction:column}}
+
+/* V15.16 — adhésions vides + agenda tâches groupé par date */
+.membership-empty-simple{grid-column:1/-1;min-height:180px;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:750;color:#30343a;text-align:center}
+.task-day-list{display:flex;flex-direction:column;gap:22px;padding:2px 0 28px;min-height:0;overflow:visible}
+.task-day-group{display:grid;grid-template-columns:220px minmax(0,1fr);gap:28px;align-items:start}
+.task-day-label{padding:17px 6px 0 2px;position:sticky;top:8px;align-self:start}
+.task-day-label strong{display:block;font-size:17px;line-height:1.25;color:#20242c;font-weight:800;text-transform:none}
+.task-day-label span{display:block;margin-top:6px;font-size:12px;color:#818a99}
+.task-day-items{display:flex;flex-direction:column;gap:10px;min-width:0}
+.task-agenda-card.task-agenda-card-compact{grid-template-columns:96px minmax(0,1fr) 24px;padding:16px 18px;border-radius:18px;min-height:96px}
+.task-time{align-self:stretch;display:flex;align-items:center;border-right:1px solid #edf0f5;padding-right:18px}
+.task-time strong{font-size:18px;line-height:1;color:#20242c}
+.membership-type-mini span{font-size:12px;color:#7d8797;font-weight:700}
+.task-agenda-card-compact .task-copy h3{margin:4px 0 2px;font-size:15px}
+.task-agenda-card-compact .task-copy p{font-size:12px}
+.membership-validation-card{border-left:1px solid #e2e7ef}
+@media(max-width:900px){.task-day-group{grid-template-columns:1fr;gap:8px}.task-day-label{position:static;padding:8px 2px 0}.task-day-items{gap:8px}}
+@media(max-width:640px){.task-agenda-card.task-agenda-card-compact{grid-template-columns:72px minmax(0,1fr) 18px;padding:14px 13px}.task-time{padding-right:10px}.task-time strong{font-size:16px}.task-day-label strong{font-size:15px}}
