@@ -46,3 +46,7 @@ Ne pas la superposer à l'ancien dépôt `crm-app`, qui contient des fichiers PR
 - La session Supabase reste celle de l’administrateur : seul le contexte d’affichage change.
 - Retour à l’administration depuis le même menu ou le bandeau Mode administrateur.
 - Le sélecteur est inaccessible aux délégués.
+
+
+## Version actuelle
+V15.1 — voir `README-V15.1.md`.
