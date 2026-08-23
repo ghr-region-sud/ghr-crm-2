@@ -26,16 +26,3 @@ alter table public.app_users enable row level security;
 insert into storage.buckets (id,name,public,file_size_limit,allowed_mime_types)
 values ('ghr-documents','ghr-documents',false,10485760,null)
 on conflict (id) do update set file_size_limit=excluded.file_size_limit;
-
--- V11 - connexions Google Agenda (serveur uniquement)
-create table if not exists public.google_calendar_connections (
-  profile_id text primary key,
-  google_email text not null default '',
-  refresh_token text not null default '',
-  access_token text not null default '',
-  expires_at timestamptz,
-  scope text not null default '',
-  created_at timestamptz not null default now(),
-  updated_at timestamptz not null default now()
-);
-alter table public.google_calendar_connections enable row level security;
