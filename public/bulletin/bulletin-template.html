@@ -189,8 +189,6 @@ window.renderBulletin = function(data) {
     const value = el.dataset.check.split('.').reduce((o,k)=>o?.[k], data);
     el.classList.toggle('checked', value === true);
   });
-  const sepa = document.querySelector('[data-section="sepa"]');
-  if (sepa) sepa.hidden = data?.payment?.sepa !== true;
 };
 </script>
 </body>
