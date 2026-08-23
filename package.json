@@ -1,6 +1,6 @@
 {
-  "name": "ghr-crm-v15-7",
-  "version": "15.7.0",
+  "name": "ghr-crm-v15-8",
+  "version": "15.8.0",
   "private": true,
   "scripts": {
     "dev": "next dev",

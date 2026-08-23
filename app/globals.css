@@ -427,3 +427,75 @@ html,body{height:100%;overflow:hidden}.shell{height:100vh;min-height:0;display:f
 .settings-layout-v157{max-width:720px}.settings-layout-v157 .settings-stack-v155{width:100%}
 
 @media(max-width:760px){.compact-topbar .brand>div:last-child{display:none}.compact-topbar{padding:0 10px}.compact-topbar .sync{display:none}.opportunity-modal-grid{grid-template-columns:1fr}.task-agenda-card{grid-template-columns:1fr 20px;gap:10px}.task-date{grid-column:1/-1;border-right:0;border-bottom:1px solid #edf0f5;padding:0 0 10px}.task-modal-summary{grid-template-columns:1fr}.v156-pipeline{grid-template-columns:repeat(8,220px)!important}.v156-stage{width:220px!important;min-width:220px!important;max-width:220px!important}}
+
+/* V15.8 — shell sans bandeau, hiérarchie cohérente et modales métier */
+.app-layout-v158{min-height:100vh!important;grid-template-columns:268px minmax(0,1fr)!important}
+.app-layout-v158 .sidebar{position:fixed!important;left:0;top:0!important;bottom:0;height:100vh!important;width:268px;padding:0 12px 14px!important;overflow-y:auto;display:flex;flex-direction:column;z-index:80}
+.app-layout-v158 .workspace-column{grid-column:2;min-width:0;min-height:100vh;position:relative}
+.sidebar-brand-v158{display:flex;align-items:center;gap:11px;padding:20px 14px 16px;border-bottom:1px solid rgba(255,255,255,.16);margin-bottom:4px}
+.sidebar-brand-v158 .brandmark{width:38px;height:38px;border-radius:11px;background:#fff;color:#173cae;display:grid;place-items:center;font-weight:900;flex:none}
+.sidebar-brand-v158 small{display:block;color:rgba(255,255,255,.58);font-size:9px;text-transform:uppercase;letter-spacing:.15em;font-weight:800}
+.sidebar-brand-v158 strong{display:block;color:#fff;font-size:14px;line-height:1.15;margin-top:2px}
+.app-layout-v158 .delegate-sidebar-v152 .sidebar-profile{padding:15px 14px!important;margin:0!important;border-bottom:1px solid rgba(255,255,255,.14)!important}
+.app-layout-v158 .sidebar-profile{padding:15px 14px;border-bottom:1px solid var(--border);margin:0}
+.app-layout-v158 .sidebar-nav{flex:1;min-height:0;overflow:visible}
+.sidebar-bottom-v158{margin-top:auto;padding-top:10px;border-top:1px solid rgba(255,255,255,.16)}
+.delegate-sidebar-v152 .sidebar-bottom-v158 .navbtn{color:rgba(255,255,255,.9)!important;background:transparent!important}
+.delegate-sidebar-v152 .sidebar-bottom-v158 .navbtn:hover{background:rgba(255,255,255,.09)!important}
+.delegate-sidebar-v152 .sidebar-bottom-v158 .navbtn.active{background:rgba(255,255,255,.15)!important;color:#fff!important;box-shadow:none!important}
+.delegate-sidebar-v152 .sidebar-bottom-v158 .logout{margin-top:2px!important}
+.workspace-utility-v158{height:66px;display:flex;align-items:center;justify-content:flex-end;gap:9px;padding:12px 26px 8px;background:transparent;position:relative;z-index:55}
+.workspace-utility-v158 .sync{color:#7b8494;background:#eef1f6;padding:7px 10px;border-radius:999px;font-size:12px}
+.workspace-utility-v158 .user-chip{background:#fff;border:1px solid #e2e6ee;border-radius:15px;padding:7px 10px;min-height:44px}
+.workspace-utility-v158 .profile-menu{right:0;top:54px}
+.app-layout-v158 .main{padding:8px 28px 28px!important}
+.app-layout-v158 .fixed-page{height:calc(100vh - 66px)!important}
+.mobilebar{z-index:90}
+
+/* Pipeline: horizontal movement belongs to the board, vertical movement to each column. */
+.v156-pipeline-scroll{overscroll-behavior-x:auto!important;touch-action:pan-x pan-y;scroll-behavior:smooth}
+.v156-stage-list{overscroll-behavior-y:contain!important;overscroll-behavior-x:auto!important;touch-action:pan-y pan-x}
+.v156-sales-card,.v152-sales-card{flex:0 0 auto!important;min-height:0!important}
+.v156-sales-card .sales-card-open{min-height:0}
+
+/* Opportunity popup — compact business cockpit rather than a generic dialog. */
+.v158-opportunity{width:min(860px,94vw)!important;padding:0!important;overflow:hidden!important;border-radius:22px!important}
+.v158-opportunity .opportunity-modal-head{padding:24px 26px 18px;margin:0;border-bottom:1px solid #edf0f5}
+.v158-opportunity .opportunity-modal-head h2{font-size:24px;line-height:1.15;letter-spacing:-.025em;color:#17223d}
+.opportunity-title-contact{font-weight:500;color:#6d7788;font-size:.76em}
+.v158-opportunity .opportunity-modal-head .meta{font-size:12px;color:#8a93a2;margin:6px 0 0}
+.opportunity-tabs-v158{display:flex;gap:4px;padding:8px 18px;background:#f7f8fb;border-bottom:1px solid #e7ebf1;overflow-x:auto}
+.opportunity-tabs-v158 button{border:0;background:transparent;border-radius:10px;padding:9px 12px;color:#6d7788;font-size:12px;font-weight:800;cursor:pointer;white-space:nowrap}
+.opportunity-tabs-v158 button.active{background:#fff;color:#174fc6;box-shadow:0 2px 9px rgba(22,49,104,.08)}
+.opportunity-tabs-v158 button span{margin-left:5px;background:#eef2f8;border-radius:999px;padding:2px 6px;font-size:10px}
+.opportunity-overview-v158{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(260px,.8fr);gap:14px;padding:20px 22px}
+.opportunity-status-card-v158,.opportunity-contact-v158{border:1px solid #e5e9f0;border-radius:17px;background:#fff;padding:17px}
+.field-mini>span,.opportunity-inline-grid span,.next-action-box-v158>span,.opportunity-contact-head span,.contact-company-grid-v158 span{display:block;font-size:10px;text-transform:uppercase;letter-spacing:.11em;color:#8a93a2;font-weight:850;margin-bottom:7px}
+.field-mini .input{font-size:14px!important;font-weight:700;background:#f8f9fc}
+.opportunity-inline-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:16px}
+.opportunity-inline-grid strong{font-size:13px;color:#17223d}
+.next-action-box-v158{margin-top:16px;padding:13px 14px;background:#f7f9fc;border-radius:13px;display:flex;flex-direction:column;align-items:flex-start}
+.next-action-box-v158 strong{font-size:14px;color:#17223d}.next-action-box-v158 small{font-size:11px;color:#7e8898;margin-top:4px}
+.opportunity-contact-head{display:flex;gap:11px;align-items:center}.contact-avatar-v158{width:42px;height:42px;border-radius:12px;background:#eaf0ff;color:#174fc6;font-weight:900;display:grid;place-items:center;flex:none}
+.opportunity-contact-head h3{font-size:16px;margin:0;color:#17223d}.opportunity-contact-head p{margin:3px 0 0;font-size:12px;color:#7d8796}
+.opportunity-contact-actions-v158{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:16px}.opportunity-contact-actions-v158 a{display:flex;align-items:center;justify-content:center;gap:5px;text-decoration:none;color:#174fc6;border:1px solid #dfe5ef;border-radius:10px;padding:9px 6px;font-size:11px;font-weight:800;background:#fff}.opportunity-contact-actions-v158 a:hover{background:#f3f6fd}
+.contact-coords-v158{display:grid;gap:5px;margin-top:13px}.contact-coords-v158 span{font-size:12px;color:#626e80;overflow-wrap:anywhere}
+.opportunity-panel-v158{padding:20px 22px;min-height:310px}.opportunity-compose-v158{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:9px;align-items:end}.opportunity-compose-v158 textarea{resize:vertical;min-height:82px}
+.opportunity-note-list-v158,.opportunity-task-list-v158,.opportunity-payment-list-v158{display:grid;gap:9px;margin-top:14px;max-height:330px;overflow:auto}.opportunity-note-list-v158 article,.opportunity-task-list-v158 article,.opportunity-payment-list-v158 article{border:1px solid #e6eaf0;border-radius:13px;padding:12px 14px;background:#fff}.opportunity-note-list-v158 p{margin:0 0 6px;font-size:13px;line-height:1.45}.opportunity-note-list-v158 small,.opportunity-task-list-v158 small,.opportunity-payment-list-v158 small{font-size:11px;color:#8791a0}
+.opportunity-task-list-v158 article,.opportunity-payment-list-v158 article{display:flex;align-items:center;justify-content:space-between;gap:12px}.opportunity-task-list-v158 article>div,.opportunity-payment-list-v158 article>div{display:flex;flex-direction:column;align-items:flex-start;gap:4px}.opportunity-task-list-v158 article button{border:0;background:#edf8f2;color:#16834b;border-radius:9px;padding:8px 10px;font-size:11px;font-weight:800;display:flex;align-items:center;gap:5px;cursor:pointer}
+.v158-opportunity .opportunity-footer{padding:13px 22px 20px;margin:0;border-top:1px solid #edf0f5}.v158-opportunity .opportunity-footer .btn{margin-left:auto}
+
+/* Contact drawer — actions first, compact company preview. */
+.contact-drawer-v158{width:min(430px,94vw)!important;padding:22px!important}
+.contact-drawer-v158 .sectionhead h2{font-size:23px;margin:2px 0 4px}.contact-drawer-v158 .sectionhead .meta{font-size:12px;margin:0}
+.v158-contact-actions{grid-template-columns:repeat(3,1fr)!important}.v158-contact-actions .btn{font-size:12px!important;min-height:40px!important;padding:9px 8px!important}
+.contact-company-preview-v158{border:1px solid #e4e9f0;border-radius:16px;padding:15px;margin:14px 0;background:#f9fafc}.contact-company-preview-v158 h3{margin:3px 0 0;font-size:17px}.contact-company-grid-v158{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0}.contact-company-grid-v158 div:last-child{grid-column:1/-1}.contact-company-grid-v158 strong{font-size:12px;color:#17223d}.contact-company-preview-v158 .btn{width:100%}
+
+/* Company card hierarchy: contact data should never overpower headings. */
+.contacts-info-card .grid.three{grid-template-columns:repeat(auto-fit,minmax(220px,280px))!important}.contacts-info-card .contactcard{padding:15px!important}.contacts-info-card .contactcard h3{font-size:15px!important;margin:10px 0 3px!important}.contacts-info-card .contactcard .meta{font-size:12px!important}.contacts-info-card .contactlinks a{font-size:12px!important}.contacts-info-card .contacticon{width:36px;height:36px;border-radius:10px}.contacts-info-card .contacticon svg{width:17px}.commercial-stage-card-v158{align-self:start}.commercial-stage-card-v158 h2{font-size:18px!important}.commercial-stage-card-v158 .field{margin-bottom:0}
+
+/* Membership editor — consistent weights, no oversized status bar. */
+.membership-editor-v156{color:#27334a}.membership-summary-card h2,.disclosure-v156 summary h2{font-weight:760!important;color:#303947}.summary-grid-v156 span{font-weight:650!important;color:#7b8595!important}.summary-grid-v156 strong{font-weight:760!important;font-size:14px!important}.membership-summary-card .pill{max-width:max-content}.disclosure-v156 summary>span{font-weight:750!important}.membership-editor-v156 .btn{font-size:12px}.membership-editor-v156 .input{font-size:14px!important}
+
+@media(max-width:900px){.app-layout-v158{display:block!important}.app-layout-v158 .sidebar{transform:translateX(-100%);transition:.2s ease}.app-layout-v158 .sidebar.open{transform:translateX(0)}.app-layout-v158 .workspace-column{grid-column:auto}.workspace-utility-v158{height:58px;padding:8px 12px}.workspace-utility-v158 .sync{display:none}.app-layout-v158 .main{padding:8px 14px 20px!important}.opportunity-overview-v158{grid-template-columns:1fr}.opportunity-contact-actions-v158{grid-template-columns:1fr 1fr 1fr}}
+@media(max-width:600px){.workspace-utility-v158 .admin-mode-pill{font-size:10px;padding:6px 8px}.workspace-utility-v158 .user-chip div{display:none}.workspace-utility-v158 .user-chip{padding:5px}.opportunity-title-contact{display:block;margin-top:4px}.opportunity-overview-v158,.opportunity-panel-v158{padding:15px}.opportunity-tabs-v158{padding:7px 10px}.opportunity-compose-v158{grid-template-columns:1fr}.opportunity-contact-actions-v158{grid-template-columns:1fr}.contact-company-grid-v158{grid-template-columns:1fr}.contact-company-grid-v158 div:last-child{grid-column:auto}}
