@@ -694,3 +694,13 @@ html,body{height:100%;overflow:hidden}.shell{height:100vh;min-height:0;display:f
 .membership-validation-card .membership-type-mini{align-self:flex-start;padding-top:4px}
 .membership-validation-card .membership-type-mini span{font-size:11px;text-transform:none;color:#8a93a2;font-weight:700}
 @media(max-width:900px){.actions-page-v157 .task-day-list{max-height:none;overflow:visible;padding-right:0}.task-day-label{position:static;background:transparent}.task-day-group{grid-template-columns:1fr;gap:8px}}
+
+/* V15.21 - contrôle avant génération du bulletin */
+.autosave-status{min-width:112px;text-align:right}
+.bulletin-review-intro{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;padding:4px 0 16px;border-bottom:1px solid #edf0f5}
+.bulletin-review-intro strong{font-size:17px;color:#17223a}.bulletin-review-intro p{margin:5px 0 0;color:#7a8392;font-size:12px}
+.bulletin-review-count{border-radius:999px;padding:7px 10px;font-size:11px;font-weight:800;white-space:nowrap}.bulletin-review-count.warning{background:#fff4d8;color:#946300}.bulletin-review-count.ok{background:#eaf8f1;color:#16774b}
+.bulletin-review-warning{display:flex;gap:10px;align-items:flex-start;background:#fff9e9;border:1px solid #f2dfaa;border-radius:14px;padding:12px 14px;margin:14px 0;color:#76540b}.bulletin-review-warning svg{flex:none;margin-top:1px}.bulletin-review-warning strong,.bulletin-review-warning span{display:block}.bulletin-review-warning span{font-size:11px;margin-top:3px;color:#8a6b27}
+.bulletin-review-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:14px}.bulletin-review-section{border:1px solid #e7eaf0;border-radius:16px;padding:14px;background:#fff}.bulletin-review-section h3{margin:0 0 9px;font-size:13px;color:#17223a}.bulletin-review-row{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;padding:7px 0;border-top:1px solid #f0f2f6;font-size:11px}.bulletin-review-row:first-child{border-top:0}.bulletin-review-row span{color:#7a8392}.bulletin-review-row strong{text-align:right;color:#26324a;max-width:62%;overflow-wrap:anywhere}.bulletin-review-row.missing strong{color:#a06c00;font-weight:750}
+.bulletin-review-footer{display:flex;justify-content:flex-end;gap:10px;padding-top:16px;margin-top:14px;border-top:1px solid #edf0f5}
+@media(max-width:760px){.bulletin-review-intro{flex-direction:column}.bulletin-review-grid{grid-template-columns:1fr}.bulletin-review-footer{display:grid;grid-template-columns:1fr}.autosave-status{text-align:left;min-width:0}}
