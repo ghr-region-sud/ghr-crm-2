@@ -614,3 +614,7 @@ html,body{height:100%;overflow:hidden}.shell{height:100vh;min-height:0;display:f
   .task-modal-footer-v159{padding-left:18px!important;padding-right:18px!important}
   .opportunity-inline-grid{grid-template-columns:1fr!important}
 }
+
+/* V15.11 — stabilisation ouverture fiche depuis Communauté > Entreprises */
+.v1511-company-row{cursor:pointer;appearance:none;text-align:inherit;width:100%;}
+.v1511-company-row:focus-visible{outline:2px solid #2d5bdb;outline-offset:-2px;}
