@@ -718,3 +718,14 @@ html,body{height:100%;overflow:hidden}.shell{height:100vh;min-height:0;display:f
 .bulletin-review-editrow input:focus,.bulletin-review-editrow select:focus{background:#fff;border-color:#2d62d8;box-shadow:0 0 0 3px rgba(45,98,216,.10)}
 .bulletin-review-editrow.missing input{background:#fffaf0;color:#9a6700}
 @media(max-width:760px){.bulletin-review-editrow{grid-template-columns:1fr;gap:4px}.bulletin-review-editrow input,.bulletin-review-editrow select{text-align:left}.bulletin-review-grid.editable .bulletin-review-sepa{grid-column:auto}}
+
+/* V15.23 - vérification bulletin : informations métier complètes et activité guidée */
+.bulletin-review-company{grid-row:span 2}
+.bulletin-review-activity-editor{border-top:1px solid #f0f2f6;padding:9px 0 2px;display:grid;grid-template-columns:minmax(120px,.8fr) minmax(0,1.35fr);gap:8px 12px;align-items:center;font-size:11px}
+.bulletin-review-activity-editor .activity-label{color:#707b90;font-weight:600}
+.bulletin-review-activity-editor>select,.bulletin-review-activity-editor>input{grid-column:2;width:100%;height:32px;border:1px solid transparent;border-radius:8px;background:#f7f9fc;color:#26324a;padding:0 9px;font:inherit;font-weight:700;outline:none}
+.bulletin-review-activity-editor>input{margin-top:-2px}
+.activity-chips{grid-column:2;display:flex;flex-wrap:wrap;gap:6px;min-height:28px;align-items:center}
+.activity-chips button{display:inline-flex;align-items:center;gap:5px;border:1px solid #dce5f7;background:#eef4ff;color:#234eaa;border-radius:999px;padding:5px 8px;font-size:10px;font-weight:750;cursor:pointer}
+.activity-chips em{color:#a06c00;font-style:normal;font-weight:700;background:#fffaf0;border-radius:8px;padding:5px 8px}
+@media(max-width:760px){.bulletin-review-company{grid-row:auto}.bulletin-review-activity-editor{grid-template-columns:1fr;gap:5px}.bulletin-review-activity-editor>select,.bulletin-review-activity-editor>input,.activity-chips{grid-column:1}}

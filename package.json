@@ -1,18 +1,18 @@
 {
-  "name": "ghr-crm-v15-19",
-  "version": "15.22.0",
+  "name": "ghr-crm",
+  "version": "15.24.4",
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "node scripts/cleanup-legacy.mjs && next build",
     "start": "next start"
   },
   "dependencies": {
     "lucide-react": "^0.468.0",
     "next": "16.3.0",
     "pdf-lib": "^1.17.1",
-    "react": "19.0.0",
-    "react-dom": "19.0.0",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
     "recharts": "^2.15.4",
     "xlsx": "^0.18.5"
   }
