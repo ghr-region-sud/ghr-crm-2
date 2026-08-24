@@ -1,15 +1,13 @@
-# GHR Région Sud — CRM V15.24.3
+# CRM GHR Région Sud — v15.24.5
 
-Version de déploiement nettoyée.
+Version propre prête pour Vercel.
 
-## Corrections de build
-- correction de `app/api/bulletin/route.js` (template string `Content-Disposition` valide) ;
-- suppression automatique des anciens fichiers Next.js/Presty pouvant rester dans GitHub après un upload par-dessus une ancienne version ;
-- suppression explicite du vieux `app/page.tsx` qui importait `@/components/PrestyApp` ;
-- conservation du point d'entrée GHR actuel `app/page.jsx` -> `components/GhrApp.jsx` ;
-- nettoyage des README historiques dans le ZIP.
+## Correctif bulletin PDF
+- suppression des grands masques blancs qui coupaient les libellés et les pointillés ;
+- repositionnement exact des cases d'activité, notamment Hôtel 5* ;
+- conservation des champs Nombre de salariés, Nombre de chambres, Classement, Type de licence, SIRET, Code NAF et Statut juridique ;
+- suppression de la seconde année superposée sur « Montant de votre cotisation » ;
+- cases Oui / Non et mode de règlement rendus avec un marquage net ;
+- modèle PDF validé conservé comme fond maître, sur une seule page A4.
 
-## Déploiement
-Les variables d'environnement existantes restent inchangées. Après remplacement des fichiers du dépôt, Vercel exécute `npm run build`.
-
-Important : le script `scripts/cleanup-legacy.mjs` est volontaire. Il protège le build lorsque GitHub conserve des fichiers d'anciennes versions qui ne sont pas présents dans ce ZIP.
+Déploiement : `npm install` puis `npm run build`.
