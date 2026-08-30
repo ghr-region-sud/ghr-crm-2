@@ -1,13 +1,10 @@
-# CRM GHR Région Sud — v15.24.5
+# GHR CRM — v15.25.1
 
-Version propre prête pour Vercel.
+Correctif ciblé fiche entreprise.
 
-## Correctif bulletin PDF
-- suppression des grands masques blancs qui coupaient les libellés et les pointillés ;
-- repositionnement exact des cases d'activité, notamment Hôtel 5* ;
-- conservation des champs Nombre de salariés, Nombre de chambres, Classement, Type de licence, SIRET, Code NAF et Statut juridique ;
-- suppression de la seconde année superposée sur « Montant de votre cotisation » ;
-- cases Oui / Non et mode de règlement rendus avec un marquage net ;
-- modèle PDF validé conservé comme fond maître, sur une seule page A4.
+- Corrige le crash de l’onglet **Suivi > Notes** : le composant de notes manquant est maintenant implémenté dans l’application.
+- Corrige le crash **Ajouter > Activité** : le formulaire d’activité est maintenant une modale interne et n’effectue aucune navigation.
+- Les notes sont ajoutées directement à la fiche entreprise et peuvent être supprimées.
+- Les activités sont ajoutées directement à l’historique de l’entreprise.
 
-Déploiement : `npm install` puis `npm run build`.
+Déploiement : publier le contenu du ZIP à la racine du dépôt Vercel existant. Les variables d’environnement restent celles du projet actuel.

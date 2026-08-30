@@ -9,42 +9,16 @@ export const runtime = "nodejs";
 
 export async function POST(req) {
   const auth = await effectiveDelegateId();
-  if (auth.error) {
-    return NextResponse.json(
-      { error: "Authentification requise" },
-      { status: auth.status || 401 }
-    );
-  }
+  if (auth.error) return NextResponse.json({ error: "Authentification requise" }, { status: auth.status || 401 });
 
   const body = await req.json().catch(() => null);
-  if (!body?.company || !body?.membership) {
-    return NextResponse.json(
-      { error: "Données du bulletin incomplètes" },
-      { status: 400 }
-    );
-  }
-
-  if (auth.delegateId && body.company.ownerId !== auth.delegateId) {
-    return NextResponse.json({ error: "Non autorisé" }, { status: 403 });
-  }
+  if (!body?.company || !body?.membership) return NextResponse.json({ error: "Données du bulletin incomplètes" }, { status: 400 });
+  if (auth.delegateId && body.company.ownerId !== auth.delegateId) return NextResponse.json({ error: "Non autorisé" }, { status: 403 });
 
   try {
-    const reference = await fs.readFile(
-      path.join(process.cwd(), "public", "bulletin", "bulletin-preview-reference.pdf")
-    );
-
-    const bytes = await buildBulletinPdf(
-      reference,
-      body.company,
-      body.membership,
-      body.contact || {}
-    );
-
-    const safeName =
-      String(body.company.name || "GHR")
-        .replace(/[^a-z0-9_-]+/gi, "-")
-        .replace(/^-+|-+$/g, "") || "GHR";
-
+    const logoBytes = await fs.readFile(path.join(process.cwd(), "public", "ghr-region-sud-logo.png"));
+    const bytes = await buildBulletinPdf({ logoBytes, company: body.company, membership: body.membership, contact: body.contact || {} });
+    const safeName = String(body.company.name || "GHR").replace(/[^a-z0-9_-]+/gi, "-").replace(/^-+|-+$/g, "") || "GHR";
     return new NextResponse(bytes, {
       headers: {
         "Content-Type": "application/pdf",
@@ -54,9 +28,6 @@ export async function POST(req) {
     });
   } catch (error) {
     console.error("[bulletin] generation failed", error);
-    return NextResponse.json(
-      { error: error?.message || "Impossible de générer le bulletin" },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: error?.message || "Impossible de générer le bulletin" }, { status: 500 });
   }
 }
